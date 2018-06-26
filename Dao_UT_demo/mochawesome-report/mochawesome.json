@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-06-12T10:47:43.287Z",
+    "end": "2018-06-12T10:47:43.385Z",
+    "duration": 98,
+    "testsRegistered": 3,
+    "passPercent": 66.7,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "warning",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "17a2c7e1-1685-4c7d-80b6-7a8e205609db",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "b1751e90-4a6e-4100-b917-bb2c0a2fea1f",
+        "title": "Model Comment Tests",
+        "fullFile": "c:\\Users\\bli181\\Documents\\Dao_UT_demo\\test\\models\\comment.test.js",
+        "file": "\\test\\models\\comment.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "Model Comment Tests \"before all\" hook",
+            "timedOut": false,
+            "duration": 30,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "DB.connect(DB.MODE_TEST, done)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "9a19e7ff-4111-48d8-9c2b-1c46b80f69bd",
+            "isHook": true,
+            "skipped": false
+          },
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Model Comment Tests \"before each\" hook",
+            "timedOut": false,
+            "duration": 3,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "DB.drop(function(err) {\n  if (err) return done(err)\nDB.fixtures(fixtures, done)\n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "428ee3e0-fac5-44a1-89dc-e391a8d134f7",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "all",
+            "fullTitle": "Model Comment Tests all",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "Comment.all(function(err, comments) {\n  comments.length.should.eql(2)\n  done()\n})",
+            "err": {
+              "message": "AssertionError: expected 3 to equal 2",
+              "estack": "AssertionError: expected 3 to equal 2\n    at Assertion.fail (node_modules\\should\\cjs\\should.js:275:17)\n    at Assertion.value (node_modules\\should\\cjs\\should.js:356:19)\n    at c:\\Users\\bli181\\Documents\\Dao_UT_demo\\test\\models\\comment.test.js:22:30\n    at result (node_modules\\mongodb\\lib\\utils.js:414:17)\n    at executeCallback (node_modules\\mongodb\\lib\\utils.js:406:9)\n    at handleCallback (node_modules\\mongodb\\lib\\utils.js:128:55)\n    at self.close (node_modules\\mongodb\\lib\\cursor.js:904:60)\n    at handleCallback (node_modules\\mongodb\\lib\\utils.js:128:55)\n    at completeClose (node_modules\\mongodb\\lib\\cursor.js:1043:14)\n    at _endSession (node_modules\\mongodb\\lib\\cursor.js:1053:35)\n    at Cursor._endSession (node_modules\\mongodb-core\\lib\\cursor.js:190:5)\n    at Cursor._endSession (node_modules\\mongodb\\lib\\cursor.js:217:59)\n    at Cursor.close (node_modules\\mongodb\\lib\\cursor.js:1053:17)\n    at c:\\Users\\bli181\\Documents\\Dao_UT_demo\\node_modules\\mongodb\\lib\\cursor.js:904:21\n    at handleCallback (node_modules\\mongodb-core\\lib\\cursor.js:199:5)\n    at _setCursorNotifiedImpl (node_modules\\mongodb-core\\lib\\cursor.js:556:38)\n    at self._endSession (node_modules\\mongodb-core\\lib\\cursor.js:564:46)\n    at ClientSession.endSession (node_modules\\mongodb-core\\lib\\sessions.js:72:41)\n    at Cursor._endSession (node_modules\\mongodb-core\\lib\\cursor.js:185:13)\n    at Cursor._endSession (node_modules\\mongodb\\lib\\cursor.js:217:59)\n    at _setCursorNotifiedImpl (node_modules\\mongodb-core\\lib\\cursor.js:564:17)\n    at setCursorNotified (node_modules\\mongodb-core\\lib\\cursor.js:556:3)\n    at setCursorDeadAndNotified (node_modules\\mongodb-core\\lib\\cursor.js:549:3)\n    at nextFunction (node_modules\\mongodb-core\\lib\\cursor.js:769:5)\n    at Cursor.next (node_modules\\mongodb-core\\lib\\cursor.js:810:3)\n    at Cursor._next (node_modules\\mongodb\\lib\\cursor.js:202:36)\n    at fetchDocs (node_modules\\mongodb\\lib\\cursor.js:897:10)\n    at c:\\Users\\bli181\\Documents\\Dao_UT_demo\\node_modules\\mongodb\\lib\\cursor.js:923:7\n    at handleCallback (node_modules\\mongodb-core\\lib\\cursor.js:199:5)\n    at nextFunction (node_modules\\mongodb-core\\lib\\cursor.js:800:5)\n    at c:\\Users\\bli181\\Documents\\Dao_UT_demo\\node_modules\\mongodb-core\\lib\\cursor.js:682:7\n    at queryCallback (node_modules\\mongodb-core\\lib\\cursor.js:263:16)\n    at c:\\Users\\bli181\\Documents\\Dao_UT_demo\\node_modules\\mongodb-core\\lib\\connection\\pool.js:544:18\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)",
+              "diff": "- 3\n+ 2\n"
+            },
+            "isRoot": false,
+            "uuid": "fee2b2c2-ac01-4df6-a9fe-0e7920e5957c",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "create",
+            "fullTitle": "Model Comment Tests create",
+            "timedOut": false,
+            "duration": 4,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "Comment.create('Famous Person', 'I am so famous!', function(err, id) {\n  Comment.all(function(err, comments) {\n    comments.length.should.eql(4)\n    comments[3]._id.should.eql(id)\n    comments[3].user.should.eql('Famous Person')\n    comments[3].text.should.eql('I am so famous!')\n    done()\n  })\n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "a12a700a-edd8-45d8-9b93-793ce4660e40",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "remove",
+            "fullTitle": "Model Comment Tests remove",
+            "timedOut": false,
+            "duration": 3,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "Comment.all(function(err, comments) {\n  Comment.remove(comments[0]._id, function(err) {\n    Comment.all(function(err, result) {\n      result.length.should.eql(2)\n      result[0]._id.should.not.eql(comments[0]._id)\n      result[1]._id.should.not.eql(comments[0]._id)\n      done()\n    })\n  })\n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "79b63a4d-4b34-467a-9af8-0154f22757d8",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "a12a700a-edd8-45d8-9b93-793ce4660e40",
+          "79b63a4d-4b34-467a-9af8-0154f22757d8"
+        ],
+        "failures": [
+          "fee2b2c2-ac01-4df6-a9fe-0e7920e5957c"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
